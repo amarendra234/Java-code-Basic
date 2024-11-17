@@ -1,0 +1,22 @@
+class outer{
+    int instanceval=10;
+    static int classval=20;
+    
+    class Inner{
+        public void print(){
+            System.out.println("Print sum val: "+instanceval+classval);
+        }
+    }
+}
+
+
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Hello World!");
+        // outerclass.Nestedclass obj=new outerclass.Nestedclass();
+        // obj.print();
+        outer obj=new outer();
+        outer.Inner innerobj=obj.new Inner();
+        innerobj.print();
+    }
+}
