@@ -1,0 +1,23 @@
+ abstract class Car {
+  public abstract void pressbreak();
+    
+}
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Hello World!");
+        // outerclass.Nestedclass obj=new outerclass.Nestedclass();
+        // obj.print();
+        // outer obj=new outer();
+        // outer.Inner innerobj=obj.new Inner();
+        // innerobj.print();
+        Car audi=new Car() {
+            @Override
+            public void pressbreak(){
+                System.out.println("Press the break");
+            }
+
+        };
+        audi.pressbreak();
+
+    }
+}
