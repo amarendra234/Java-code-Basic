@@ -1,0 +1,18 @@
+class outerclass{
+     static int classval=10;
+     static class Nestedclass{
+        public void print(){
+            System.out.println("Print the value of x: "+classval);
+        }
+     }
+}
+
+
+
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Hello World!");
+        outerclass.Nestedclass obj=new outerclass.Nestedclass();
+        obj.print();
+    }
+}
