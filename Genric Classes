@@ -1,0 +1,22 @@
+class Print<T>{
+     T value;
+     public T getprintvalue(){
+        return value;
+     }
+     public void Setvalue(T value){
+        this.value=value;
+     }
+}
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Genric Class");
+        Print<Integer> obj=new Print<Integer>();
+        obj.Setvalue(10);
+        System.out.println(obj.getprintvalue());
+        Print<String> obj2=new Print<String>();
+        obj2.Setvalue("hello java");
+        System.out.println(obj2.getprintvalue());
+
+
+    }
+}
