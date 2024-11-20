@@ -1,0 +1,28 @@
+// Syncronized Singlton class
+class Dbconnection{
+    private static Dbconnection instance;
+    private Dbconnection(){
+
+    }
+    synchronized public static Dbconnection getinstance(){ // if two thread came same time then only one will go other one need to wait
+                                                           // it use lock and lock method
+                                                           // let's say 100 process came each time it will do lock and unlock so it will
+                                                           // it will become slow os we don't use it.
+         System.out.println("instance created");
+         if(instance==null){
+            instance=new Dbconnection();
+         }
+         return instance;
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+    //     System.out.println("Eagar Singleton Class");
+    //   Dbconnection obj=Dbconnection.getinstance();
+    //  System.out.println("Lazy singleton class");
+    //    Dbconnection inst=Dbconnection.getinstance();
+        System.out.println("Syncronized Singlton class");
+        Dbconnection inst=Dbconnection.getinstance();
+
+    }
+}
