@@ -1,0 +1,31 @@
+// Reflection in Java
+class Eagle{
+    public String breed;
+    private boolean canswim;
+    public void fly(){
+        System.out.println(("It can fly"));
+    }
+    private void eat(){
+        System.out.println("it can eat");
+    }
+
+}
+public class Main {
+    public static void main(String args[]) {
+        Class object=Eagle.class;
+        Method[] methods=object.getMethods();
+        for(Method method:methods){
+            System.out.println("Method name: "+method.getName());
+            System.out.println("Return type: "+method.getReturnType());
+            System.out.println("Class Nmae: "+method.getDeclaringClass());
+        }
+
+    //     System.out.println("Eagar Singleton Class");
+    //   Dbconnection obj=Dbconnection.getinstance();
+    //  System.out.println("Lazy singleton class");
+    //    Dbconnection inst=Dbconnection.getinstance();
+        // System.out.println("Syncronized Singlton class");
+        // Dbconnection inst=Dbconnection.getinstance();
+
+    }
+}
