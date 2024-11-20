@@ -1,0 +1,22 @@
+// Lazy Sigleton class
+class Dbconnection{
+    private static Dbconnection instance;
+    private Dbconnection(){
+
+    }
+    public static Dbconnection getinstance(){
+        System.out.println("If instance already exists return it otherwise create ");
+        if(instance==null){
+            return new Dbconnection();
+        }
+        return instance;
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+    //     System.out.println("Eagar Singleton Class");
+    //   Dbconnection obj=Dbconnection.getinstance();
+     System.out.println("Lazy singleton class");
+       Dbconnection inst=Dbconnection.getinstance();
+    }
+}
