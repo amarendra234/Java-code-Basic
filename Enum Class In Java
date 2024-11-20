@@ -1,0 +1,30 @@
+interface Myinterface{
+    public String toLowerCase();
+}
+ enum EnumSample implements Myinterface{   // ENUM class extedn java.lang.enum so it can't extend any other class
+    MONDAY,
+    TUESDAY,       // by default it is static final varabile we can't change it
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY;
+    @Override
+    public  String toLowerCase(){
+        return this.name().toLowerCase();
+    }
+}
+// enum with custom value
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Enum Class");
+        // for(EnumSample sample:EnumSample.values()){  // values give each value in enum and ordinal print defaul value assign to it;
+        //     System.out.println(sample.ordinal());
+        // }
+        EnumSample day=EnumSample.MONDAY;
+        System.out.println(day.toLowerCase());
+        
+        //System.out.println(day);
+
+    }
+}
