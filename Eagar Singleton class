@@ -1,0 +1,18 @@
+class Dbconnection{
+    static Dbconnection instance=new Dbconnection(); // as application started we created an instance
+                                                     // if not using instance still we are creating instance memory wastage
+    private Dbconnection(){
+
+    }
+    public static Dbconnection getinstance(){
+        System.out.println("Db instance returned");
+        return instance;
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+        System.out.println("Eagar Singleton Class");
+      Dbconnection obj=Dbconnection.getinstance();
+
+    }
+}
