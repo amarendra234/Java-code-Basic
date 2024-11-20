@@ -6,7 +6,7 @@ class Dbconnection{
     }
     public static Dbconnection getinstance(){
         System.out.println("If instance already exists return it otherwise create ");
-        if(instance==null){
+        if(instance==null){  // what happen if two thread come parllely then both check instnace is null and two object will be created
             return new Dbconnection();
         }
         return instance;
