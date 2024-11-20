@@ -1,5 +1,5 @@
 class Dbconnection{
-    static Dbconnection instance=new Dbconnection(); // as application started we created an instance
+    private static Dbconnection instance=new Dbconnection(); // as application started we created an instance
                                                      // if not using instance still we are creating instance memory wastage
     private Dbconnection(){
 
