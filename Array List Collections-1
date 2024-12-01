@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main {
+     public static void main(String args[]){
+        System.out.println("Main class method");
+        // int arr[]=new int[4];
+        // arr[0]=1;
+        // int val=arr[0];
+        // System.out.println("value is: "+val);
+        List<Integer> arr=new ArrayList<>();
+        arr.add(10);
+        arr.add(20);
+        arr.add(40);
+        arr.add(0);
+        // for(int val:arr){
+        //     System.out.println(val);
+        // }
+        // for(int i=0;i<arr.size();i++){
+        //     System.out.println(arr.get(i));
+        // }
+
+        // // using lambda expersssion avilable in java 1.8
+
+        // arr.forEach((Integer val) -> System.out.println(val));
+
+        // all methods present in collections which will use all data structure
+        System.out.println("Size: " + arr.size());
+        // isEmpty
+        System.out.println("Is Empty: "+ arr.isEmpty());
+        // contains
+        System.out.println("Contains: "+ arr.contains(5));
+        // add 5 then check in contains
+        arr.add(5);
+        System.out.println("Added: "+ arr.contains(5));
+        // remove via index
+        arr.remove(3);
+        System.out.println("contains: "+ arr.contains(0));
+        // remove via object , remove first occurance of value
+        arr.remove(Integer.valueOf(5));
+        arr.remove(Integer.valueOf(100));
+
+
+     } 
+}
